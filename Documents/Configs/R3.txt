@@ -1,0 +1,37 @@
+/export[7D[m[36m/[m[35mexport[m
+# 2025-03-24 14:02:50 by RouterOS 7.18.1
+# system id = 7uk4kQVBmUB
+#
+[m[36m/interface[m [m[36methernet
+[m[35mset[m [m[33m[[m [m[35mfind[m [m[32;1mdefault-name[m[33m=[mether1 [m[33m][m [m[32mdisable-running-check[m[33m=[mno
+[m[35mset[m [m[33m[[m [m[35mfind[m [m[32;1mdefault-name[m[33m=[mether2 [m[33m][m [m[32mdisable-running-check[m[33m=[mno
+[m[35mset[m [m[33m[[m [m[35mfind[m [m[32;1mdefault-name[m[33m=[mether3 [m[33m][m [m[32mdisable-running-check[m[33m=[mno
+[m[35mset[m [m[33m[[m [m[35mfind[m [m[32;1mdefault-name[m[33m=[mether4 [m[33m][m [m[32mdisable-running-check[m[33m=[mno
+[m[36m/interface[m [m[36mgre
+[m[35madd[m [m[32mname[m[33m=[mgre-tunnel1 [m[32mremote-address[m[33m=[m172.17.11.1
+[m[36m/interface[m [m[36mvlan
+[m[35madd[m [m[32minterface[m[33m=[mether2 [m[32mname[m[33m=[mvlan10 [m[32mvlan-id[m[33m=[m10
+[m[35madd[m [m[32minterface[m[33m=[mether2 [m[32mname[m[33m=[mvlan20 [m[32mvlan-id[m[33m=[m20
+[m[36m/port
+[m[35mset[m 0 [m[32mname[m[33m=[mserial0
+[m[35mset[m 1 [m[32mname[m[33m=[mserial1
+[m[36m/ip[m [m[36maddress
+[m[35madd[m [m[32maddress[m[33m=[m172.17.10.1[m[33m/[m30 [m[32minterface[m[33m=[mether1 [m[32mnetwork[m[33m=[m172.17.10.0
+[m[35madd[m [m[32maddress[m[33m=[m192.168.10.254[m[33m/[m24 [m[32minterface[m[33m=[mvlan10 [m[32mnetwork[m[33m=[m192.168.10.0
+[m[35madd[m [m[32maddress[m[33m=[m192.168.20.254[m[33m/[m24 [m[32minterface[m[33m=[mvlan20 [m[32mnetwork[m[33m=[m192.168.20.0
+[m[35madd[m [m[32maddress[m[33m=[m10.10.10.2[m[33m/[m30 [m[32minterface[m[33m=[mgre-tunnel1 [m[32mnetwork[m[33m=[m10.10.10.0
+[m[36m/ip[m [m[36mdhcp-client
+[m[35madd[m [m[32minterface[m[33m=[mether1
+[m[36m/ip[m [m[36mroute
+[m[35madd[m [m[32mdisabled[m[33m=[mno [m[32mdistance[m[33m=[m1 [m[32mdst-address[m[33m=[m0.0.0.0/0 [m[32mgateway[m[33m=[m172.17.10.2 [m[34;1m\
+    [m[32mrouting-table[m[33m=[m[35mmain[m [m[32mscope[m[33m=[m30 [m[32msuppress-hw-offload[m[33m=[mno [m[32mtarget-scope[m[33m=[m[34;1m\
+    [m10
+[m[35madd[m [m[32mdisabled[m[33m=[mno [m[32mdistance[m[33m=[m1 [m[32mdst-address[m[33m=[m192.168.30.0/24 [m[32mgateway[m[33m=[m[34;1m\
+    [m10.10.10.1 [m[32mrouting-table[m[33m=[m[35mmain[m [m[32mscope[m[33m=[m30 [m[32msuppress-hw-offload[m[33m=[mno [m[34;1m\
+    [m[32mtarget-scope[m[33m=[m10
+[m[35madd[m [m[32mdisabled[m[33m=[mno [m[32mdst-address[m[33m=[m192.168.40.0/24 [m[32mgateway[m[33m=[m10.10.10.1 [m[34;1m\
+    [m[32mrouting-table[m[33m=[m[35mmain[m [m[32msuppress-hw-offload[m[33m=[mno
+[m[36m/system[m [m[36midentity
+[m[35mset[m [m[32mname[m[33m=[mR3
+[m[36m/system[m [m[36mnote
+[m[35mset[m [m[32mshow-at-login[m[33m=[mno

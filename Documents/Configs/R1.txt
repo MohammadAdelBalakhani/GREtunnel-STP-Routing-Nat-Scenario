@@ -1,0 +1,21 @@
+/export[7D[m[36m/[m[35mexport[m
+# 2025-03-24 14:03:58 by RouterOS 7.18.1
+# system id = Cw5JUXLzBYN
+#
+[m[36m/interface[m [m[36methernet
+[m[35mset[m [m[33m[[m [m[35mfind[m [m[32;1mdefault-name[m[33m=[mether1 [m[33m][m [m[32mdisable-running-check[m[33m=[mno
+[m[35mset[m [m[33m[[m [m[35mfind[m [m[32;1mdefault-name[m[33m=[mether2 [m[33m][m [m[32mdisable-running-check[m[33m=[mno
+[m[35mset[m [m[33m[[m [m[35mfind[m [m[32;1mdefault-name[m[33m=[mether3 [m[33m][m [m[32mdisable-running-check[m[33m=[mno
+[m[35mset[m [m[33m[[m [m[35mfind[m [m[32;1mdefault-name[m[33m=[mether4 [m[33m][m [m[32mdisable-running-check[m[33m=[mno
+[m[36m/port
+[m[35mset[m 0 [m[32mname[m[33m=[mserial0
+[m[35mset[m 1 [m[32mname[m[33m=[mserial1
+[m[36m/ip[m [m[36maddress
+[m[35madd[m [m[32maddress[m[33m=[m172.17.11.2[m[33m/[m30 [m[32minterface[m[33m=[mether2 [m[32mnetwork[m[33m=[m172.17.11.0
+[m[35madd[m [m[32maddress[m[33m=[m172.17.10.2[m[33m/[m30 [m[32minterface[m[33m=[mether1 [m[32mnetwork[m[33m=[m172.17.10.0
+[m[36m/ip[m [m[36mdhcp-client
+[m[35madd[m [m[32minterface[m[33m=[mether1
+[m[36m/system[m [m[36midentity
+[m[35mset[m [m[32mname[m[33m=[mR1
+[m[36m/system[m [m[36mnote
+[m[35mset[m [m[32mshow-at-login[m[33m=[mno

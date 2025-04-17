@@ -1,0 +1,2 @@
+Create necessary vlan on All Switches
+SW-1 / SW-2 / SW-3 ==> Vlan 10,20
