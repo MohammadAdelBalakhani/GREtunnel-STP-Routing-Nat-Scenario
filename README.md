@@ -4,6 +4,7 @@
 
 This scenario involves designing and implementing a wide area network using GRE Tunnel technology between two routers (R1 and R2), connecting different VLANs on both sides of the network. It also includes STP configuration for optimized path routing in switches and the use of DHCP Client and MikroTik firewall to provide internet access.
 
+![Scenario Picture](complated-scenario-picture.png)
 ## 🥅Goals
 1. Name all the equipment according to the image above.
 
@@ -47,6 +48,8 @@ There are two versions of the network topology available:
 
 **Note:** Both files are in `.unl` format and can be used in simulators like EVE-NG.
 
+**Note:** If you want, you can see the configurations of all the equipment without running [Click here](https://github.com/MohammadAdelBalakhani/GREtunnel-STP-Routing-Nat-Scenario/tree/main/Documents/Configs)
+
 ---
 
 ### 2. Import into Your Network Simulator
@@ -55,6 +58,7 @@ After extracting the downloaded ZIP file:
 1. Open your network simulator (e.g., EVE-NG).
 2. Use the **Import** option to load the `.unl` file.
 3. Once imported, the topology will be ready to run.
+4. Creating VLAN 10,20 on SW-1 & SW-2 & SW-3.
 
 ---
 
