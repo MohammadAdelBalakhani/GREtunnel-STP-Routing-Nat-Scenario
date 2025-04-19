@@ -4,7 +4,7 @@
 
 This scenario involves designing and implementing a wide area network using GRE Tunnel technology between two routers (R1 and R2), connecting different VLANs on both sides of the network. It also includes STP configuration for optimized path routing in switches and the use of DHCP Client and MikroTik firewall to provide internet access.
 
-![Scenario Picture](complated-scenario-picture.png)
+![Scenario Picture](complated-Scenario-Picture.png)
 ## 🥅Goals
 1. Name all the equipment according to the image above.
 
