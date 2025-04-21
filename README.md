@@ -180,11 +180,11 @@ ip route add dst-address=0.0.0.0 gateway=172.17.11.2
 ### 6. **Internet Access (R2)**
 - Enable DHCP client on eth4:
   ```bash
-  /ip dhcp-client add interface=ether4 disabled=no
+  ip dhcp-client add interface=ether4 disabled=no
   ```
 - Configure NAT for internet access:
   ```bash
-  /ip firewall nat add chain=srcnat action=masquerade
+  ip firewall nat add chain=srcnat action=masquerade
   ```
 
 ### 7. **Connectivity Test**
